@@ -1,5 +1,8 @@
 @echo off
 
+rem mkdir fixes
+mkdir x64\Release\ubuntu1804
+
 rem Add path to MSBuild Binaries
 set MSBUILD=()
 if exist "%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\msbuild.exe" (
