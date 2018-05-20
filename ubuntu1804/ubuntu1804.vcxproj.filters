@@ -8,6 +8,9 @@
       <UniqueIdentifier>3cd39ea5-301d-4878-9d47-b5dbb30f6c95</UniqueIdentifier>
       <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
     </Filter>
+    <Filter Include="images">
+      <UniqueIdentifier>{e815ec8d-d239-47f0-aff5-128961164313}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Square150x150Logo.scale-200.png">
@@ -145,6 +148,12 @@
     <Image Include="Assets\SplashScreen.scale-400.png">
       <Filter>Assets</Filter>
     </Image>
+    <Image Include="images\icon.ico">
+      <Filter>images</Filter>
+    </Image>
+    <Image Include="images\icon.png">
+      <Filter>images</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="MyDistro.appxmanifest" />
@@ -154,6 +163,7 @@
     <None Include="..\x64\install.tar.gz" />
   </ItemGroup>
   <ItemGroup>
+    <CustomBuild Include="$(targetname)" />
     <CustomBuild Include="$(targetname)" />
     <CustomBuild Include="$(targetname)" />
     <CustomBuild Include="$(targetname)" />

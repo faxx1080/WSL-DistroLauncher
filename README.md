@@ -1,4 +1,21 @@
 # WSL Distro Launcher Reference Implementation
+## Frank's Additions
+Get bionic-server-cloudimg-amd64.squashfs from https://cloud-images.ubuntu.com/bionic/current/
+
+Follow directions at https://github.com/Microsoft/WSL/issues/2618 to convert to install.tar.gz. Reproduced here:
+
+```
+mkdir tmp
+unsquashfs -d tmp ubuntu-{version}-server-cloudimg-amd64.squashfs
+cd tmp
+tar czf ../install.tar.gz *
+cd ..
+rm -r tmp
+```
+Place the result in [RepoRoot]/x64.
+
+You still need to generate a signing certificate.
+
 ## Introduction 
 This is the C++ reference implementation for a Windows Subsystem for Linux (WSL) distribution installer/launcher application. Every distro package must include a launcher app, which is responsible for completing installation & registration of your distro with WSL, and for launching new distro instances atop WSL.
 
